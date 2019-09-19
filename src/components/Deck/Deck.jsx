@@ -1,5 +1,5 @@
 import React from 'react';
-import Card from '../Card/Card';
+import Card from '../Card/Card.jsx';
 import { If } from '../if/index';
 
 export default props => {
@@ -11,8 +11,8 @@ export default props => {
         </If>
 
         <If condition={props.deck.records}>
-          {props.deck.records.map( (card) =>
-            <Card card={card}/>
+          {props.deck.records.map( (card, i) =>
+            <Card card={card} key={i}/>
           )}
         </If>
       </section>

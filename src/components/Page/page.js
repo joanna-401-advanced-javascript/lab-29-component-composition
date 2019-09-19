@@ -1,6 +1,7 @@
 import React from 'react';
-import Header from '../Header/Header';
-import Deck from '../Deck/Deck';
+import PropTypes from 'prop-types';
+import Header from '../Header/Header.jsx';
+import Deck from '../Deck/Deck.jsx';
 
 const Page = (props) => {
   const content = props.content || [];
@@ -8,11 +9,12 @@ const Page = (props) => {
   return (
     <>
       <Header/>
-      {content.map((deck) => (
-        <Deck deck={deck} />
+      {content.map((deck, i) => (
+        <Deck deck={deck} key={i}/>
       ))}
     </>
   );
 };
 
+Page.propTypes = { content: PropTypes.array };
 export default Page;

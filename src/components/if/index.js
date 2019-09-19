@@ -4,7 +4,7 @@ const render = (condition = false, children = null) => {
   return condition ? children : null;
 };
 
-export const If = (props) => React.Children.map(props.children, (child) => React.cloneElement(child, { condition: props.condition }));
+export const If = (props) => React.Children.map(props.children, (child) => React.cloneElement(child, { condition: props.condition })); // eslint-disable-line
 
 export const Then = (props) => render(props.condition, props.children);
 export const Else = (props) => render(!props.condition, props.children);

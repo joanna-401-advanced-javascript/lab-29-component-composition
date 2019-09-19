@@ -16,8 +16,10 @@ export default props => {
         <If condition={props.card.links}>
           <nav className="links">
             <ul>
-              {props.card.links.map( (link,i) => (
-                <li key={i}><a className={link.type} href={link.href} title={link.title}>{link.title}</a></li>
+              {props.card.links.map( (link, i) => (
+                <li key={i}>
+                  <a className={link.type} href={link.href} title={link.title}>{link.title}</a>
+                </li>
               ))}
             </ul>
           </nav>

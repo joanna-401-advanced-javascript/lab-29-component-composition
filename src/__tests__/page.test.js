@@ -1,9 +1,9 @@
 import React from 'react';
 // import renderer from 'react-test-renderer';
 import Page from '../components/Page/page';
-import Header from '../components/Header/Header';
-import Deck from '../components/Deck/Deck';
-import Card from '../components/Card/Card';
+import Header from '../components/Header/Header.jsx';
+import Deck from '../components/Deck/Deck.jsx';
+import Card from '../components/Card/Card.jsx';
 
 describe('<Page />', () => {
   it('is rendered at application start', () => {

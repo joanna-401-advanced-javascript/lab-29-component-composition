@@ -5,7 +5,7 @@ import { BrowserRouter } from 'react-router-dom';
 import content from './content.json';
 import Page from './components/Page/page';
 
-const App = (props) => {
+const App = () => {
   return <Page content={content} />;
 };
 
