@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import App from './app';
+import content from './content.json';
+import Page from './components/page.js';
 
-class Main extends React.Component {
-  render() {
-    return <App />;
-  }
-}
+
+const App = (props) => {
+  return <Page content={content} />;
+};
 
 const rootElement = document.getElementById('root');
-ReactDOM.render(<Main />, rootElement);
+ReactDOM.render(<App />, rootElement);
